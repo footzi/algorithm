@@ -1,6 +1,5 @@
-// const arr = [6, 7, 1, 4, 3, 2, 2];
-
-const arr = [10, 35, 48, 98, 72, 658, 9453, 4872, 15436, 412, 253, 12, 0, 135, -1];
+const input = document.querySelector('#sort');
+const result = document.querySelector('#result');
 
 function bubbleSort(array) {
     for (let i = 0; i < array.length; i++) {
@@ -17,4 +16,8 @@ function bubbleSort(array) {
     return array;
 }
 
-console.log(bubbleSort(arr));
+input.addEventListener('change', () => {
+    const value = document.querySelector('#sort').value.split(',');
+
+    result.innerHTML = bubbleSort(value);
+})
